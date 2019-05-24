@@ -23,12 +23,17 @@
         <property name="age" value="21"/>
     </bean>
 
-    <bean id="movie3" class="com.stackroute.domain.Movie" >
+    <bean id="movie3" class="com.stackroute.domain.Movie" scope="prototype">
         <property name="actor" ref="actor3"/>
     </bean>
     <bean id="actor3" class="com.stackroute.domain.Actor">
         <property name="name" value="Lohitha"/>
         <property name="gender" value="female"/>
         <property name="age" value="21"/>
+
     </bean>
+    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
+        <property name="actor" ref="actor3"/>
+    </bean>
+
 </beans>

@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-       // Using XML Bean factory
+      // Using XML Bean factory
 
         System.out.println("\nUsing Bean Factory :");
 
@@ -49,9 +49,10 @@ public class Main {
         Movie movie3 = (Movie) context.getBean("movie3");
         Movie movie4 = (Movie) context.getBean("movie3");
 
-        System.out.println(movie3);
-
-
+        System.out.println(movie3==movie4);
+//  changing the id to name in beans.xml
+        Movie movie = (Movie) context.getBean("movieA");
+        System.out.println("changing the id of beans:"+ movie);
 
 
 
