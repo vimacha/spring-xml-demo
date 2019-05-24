@@ -1,4 +1,3 @@
-
 package com.stackroute.domain;
 
 public class Movie {
@@ -25,7 +24,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "\nFetching Actor details from Movie class...." +
+        return "\nFetching Actor details from Movie class.." +
                 "\n" + actor;
     }
 }

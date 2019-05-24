@@ -4,36 +4,15 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
-    <bean id="movie1" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor1"/>
-    </bean>
-    <bean id="actor1" class="com.stackroute.domain.Actor">
-        <property name="name" value="vijay"/>
-        <property name="gender" value="Male"/>
-        <property name="age" value="22"/>
-    </bean>
 
-    <bean id="movie2" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor2"/>
-    </bean>
-    <bean id="actor2" class="com.stackroute.domain.Actor">
-        <property name="name" value="Rohit"/>
-        <property name="gender" value="male"/>
-        <property name="age" value="21"/>
-    </bean>
+    <!--bean for autowire byConstructor-->
 
-    <bean id="movie3" class="com.stackroute.domain.Movie" scope="prototype">
-        <property name="actor" ref="actor3"/>
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="vijay"/>
+        <constructor-arg index="1" value="Male"/>
+        <constructor-arg index="2" value="22"/>
     </bean>
-    <bean id="actor3" class="com.stackroute.domain.Actor">
-        <property name="name" value="Lohitha"/>
-        <property name="gender" value="female"/>
-        <property name="age" value="21"/>
-
-    </bean>
-    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
-        <property name="actor" ref="actor3"/>
-    </bean>
+        <bean id="movie1" autowire="byName" class="com.stackroute.domain.Movie">
+        </bean>
 
 </beans>
