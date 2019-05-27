@@ -40,7 +40,7 @@ public class Actor {
 
     @Override
     public String toString() {
-        return "Actor details :" +
+        return "Actor details..." +
                 "\n\tName='" + name  + "'" +
                 "\n\tGender='" + gender  + "'"+
                 "\n\tAge=" + age ;

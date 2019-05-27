@@ -62,5 +62,4 @@ public class Movie implements InitializingBean, DisposableBean {
         System.out.println("beans have been destroyed");
     }
 
-
 }

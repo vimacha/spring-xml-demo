@@ -7,19 +7,25 @@
     <!-- bean definitions here -->
 
 
-    <!-- bean for autowireby Constructor-->
-    <bean id="movie"  class="com.stackroute.domain.Movie">
-        <property name="actor" ref="Actor"/>
-    </bean>
-    <bean id="Actor" class="com.stackroute.domain.Actor">
-        <constructor-arg type="String" value="vijay"/>
-        <constructor-arg type="String" value="male"/>
-        <constructor-arg type="int" value="23"/>
-    </bean>
+
+    <!--bean for autowire byType-->
+    <!--    <bean id="movie1"  autowire="byType" class="com.stackroute.domain.Movie">-->
+
+    <!--    </bean>-->
+    <!--    <bean id="Actor" class="com.stackroute.domain.Actor">-->
+    <!--        <constructor-arg type="String" value="vijay"/>-->
+    <!--        <constructor-arg type="String" value="male"/>-->
+    <!--        <constructor-arg type="int" value="23"/>-->
+    <!--    </bean>-->
+
+    <!--creating one bean for calling displaybeanname class.....-->
+    <bean class="com.stackroute.domain.BeanPostProcessorDemoBean"></bean>
 
 
-    <!--bean for autowire by name-->
-    <bean id="movie2" autowire="byName" class="com.stackroute.domain.Movie">
+
+    <!--bean for autowire byConstructors-->
+    <bean id="movie2"  class="com.stackroute.domain.Movie" scope="prototype" init-method="myInit" destroy-method="myDestroy">
+        <property name="actor" ref="actor"/>
     </bean>
     <bean id="actor" class="com.stackroute.domain.Actor">
         <property name="name" value="rohith"/>

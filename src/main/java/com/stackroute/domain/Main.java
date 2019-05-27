@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-//Application context.
+//Application context :
 
         AbstractApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         context.registerShutdownHook();
