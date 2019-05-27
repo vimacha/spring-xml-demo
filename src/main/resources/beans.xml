@@ -13,6 +13,20 @@
         <constructor-arg index="2" value="22"/>
     </bean>
         <bean id="movie1" autowire="byName" class="com.stackroute.domain.Movie">
+
         </bean>
+
+    <bean id="applicationContextAwareDemo" class="com.stackroute.domain.awareInterface.ApplicationContextAwareDemo">
+    </bean>
+
+    <bean id="beanNameAwareDemo" class="com.stackroute.domain.awareInterface.BeanNameAwareDemo">
+    </bean>
+
+    <bean id="beanFactoryAwarewDemo" class="com.stackroute.domain.awareInterface.BeanFactoryAwareDemo">
+    </bean>
+
+    <bean id="resourceLoaderAwareDemo" class="com.stackroute.domain.awareInterface.ResourceLoaderAwareDemo">
+
+    </bean>
 
 </beans>
