@@ -18,7 +18,7 @@
     </bean>
 
 
-    <!--bean for autowire by name -->
+    <!--bean for autowire by name-->
     <bean id="movie2" autowire="byName" class="com.stackroute.domain.Movie">
     </bean>
     <bean id="actor" class="com.stackroute.domain.Actor">
