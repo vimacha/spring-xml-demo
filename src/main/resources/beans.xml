@@ -4,29 +4,26 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- bean definitions here -->
 
-    <!--bean for autowire byConstructor-->
 
+    <!-- bean for autowireby Constructor-->
+    <bean id="movie"  class="com.stackroute.domain.Movie">
+        <property name="actor" ref="Actor"/>
+    </bean>
+    <bean id="Actor" class="com.stackroute.domain.Actor">
+        <constructor-arg type="String" value="vijay"/>
+        <constructor-arg type="String" value="male"/>
+        <constructor-arg type="int" value="23"/>
+    </bean>
+
+
+    <!--bean for autowire by name -->
+    <bean id="movie2" autowire="byName" class="com.stackroute.domain.Movie">
+    </bean>
     <bean id="actor" class="com.stackroute.domain.Actor">
-        <constructor-arg index="0" value="vijay"/>
-        <constructor-arg index="1" value="Male"/>
-        <constructor-arg index="2" value="22"/>
+        <property name="name" value="rohith"/>
+        <property name="gender" value="male"/>
+        <property name="age" value="22"/>
     </bean>
-        <bean id="movie1" autowire="byName" class="com.stackroute.domain.Movie">
-
-        </bean>
-
-    <bean id="applicationContextAwareDemo" class="com.stackroute.domain.awareInterface.ApplicationContextAwareDemo">
-    </bean>
-
-    <bean id="beanNameAwareDemo" class="com.stackroute.domain.awareInterface.BeanNameAwareDemo">
-    </bean>
-
-    <bean id="beanFactoryAwarewDemo" class="com.stackroute.domain.awareInterface.BeanFactoryAwareDemo">
-    </bean>
-
-    <bean id="resourceLoaderAwareDemo" class="com.stackroute.domain.awareInterface.ResourceLoaderAwareDemo">
-
-    </bean>
-
 </beans>
